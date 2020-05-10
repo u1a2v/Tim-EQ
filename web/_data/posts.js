@@ -1,4 +1,3 @@
-const imageUrlBuilder = require('@sanity/image-url')
 const BlocksToMarkdown = require('@sanity/block-content-to-markdown')
 const groq = require('groq')
 const client = require('../utils/sanityClient.js')
@@ -6,10 +5,17 @@ const serializers = require('../utils/serializers')
 const overlayDrafts = require('../utils/overlayDrafts')
 const hasToken = !!client.config().token
 
+const imageUrlBuilder = require('@sanity/image-url')
+const builder = imageUrlBuilder(client)
+
+function urlFor(source) {
+  return builder.image(source)
+}
+
 function generatePost (post) {
   return {
     ...post,
-    mainImageURL: imageUrlBuilder.urlFor(post.mainImage),
+    mainImageURL: urlFor(post.mainImage),
     body: BlocksToMarkdown(post.body, { serializers, ...client.config() })
   }
 }
