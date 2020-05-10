@@ -15,5 +15,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "lerna": "^3.20.2"
+  },
+  "dependencies": {
+    "@sanity/image-url": "^0.140.18"
   }
 }

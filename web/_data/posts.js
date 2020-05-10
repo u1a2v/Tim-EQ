@@ -1,3 +1,4 @@
+//const imageUrlBuilder = require('@sanity/image-url')
 const BlocksToMarkdown = require('@sanity/block-content-to-markdown')
 const groq = require('groq')
 const client = require('../utils/sanityClient.js')
@@ -20,7 +21,6 @@ async function getPosts () {
     publishedAt,
     title,
     slug,
-    mainImage,
     body[]{
       ...,
       children[]{
