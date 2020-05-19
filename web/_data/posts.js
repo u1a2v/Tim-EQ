@@ -15,7 +15,7 @@ function urlFor(source) {
 function generatePost (post) {
   return {
     ...post,
-    mainImageURL: urlFor(post.mainImage).width(200).url(),
+    mainImageURL: urlFor(post.mainImage).width(500).url(),
     body: BlocksToMarkdown(post.body, { serializers, ...client.config() })
   }
 }
