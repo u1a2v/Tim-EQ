@@ -2,17 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-      {# <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}"> #}
+      
     {% set css %}
       {% include "style.css" %}
     {% endset %}
+
     <style>
       {{ css | cssmin | safe }}
     </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
   </head>
+
   <body>
     <header>
       <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
@@ -23,7 +28,6 @@
           {%- endfor -%}
         </ul>
       </nav>
-
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
@@ -34,6 +38,5 @@
         <p>Телефон: {{ renderData.phone or phone or metadata.phone }}</p>
     </footer>
 
-    <!-- Current page: {{ page.url | url }} -->
   </body>
 </html>
