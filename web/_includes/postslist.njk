@@ -2,11 +2,14 @@
 {% for post in postslist | reverse %}
   {% set currentPost = post.data.post %}
   <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ post.url | url }}" class="postlist-link">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time class="postlist-date" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time>
-    <br>
-    <img src="{{ currentPost.mainImageURL }}" alt="{{ currentPost.mainImage.alt }}"/></br>
-    <p>{{ currentPost.mainImage.caption }}</p>
+    <a href="{{ post.url | url }}" class="postlist-link">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+      <!--
+      <time class="postlist-date" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time>
+      -->
+      <br>
+      <img src="{{ currentPost.mainImageURL }}" alt="{{ currentPost.mainImage.alt }}"/></br>
+      <p>{{ currentPost.mainImage.caption }}</p>
+    </a>
   </li>
 {% endfor %}
 </ol>
