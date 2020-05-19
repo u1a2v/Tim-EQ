@@ -32,7 +32,7 @@
 
     <footer>
         <p>Телефон: +79194220389</p>
-        <p>Телефон из настроек: {{ renderData.phone }}</p>
+        <p>Телефон из настроек: {{ renderData.phone or phone or metadata.phone }}</p>
     </footer>
 
     <!-- Current page: {{ page.url | url }} -->
