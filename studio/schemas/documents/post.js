@@ -30,7 +30,8 @@ export default {
     {
       name: 'mainImage',
       type: 'mainImage',
-      title: 'Main image'
+      title: 'Основное изображение',
+      description: 'Изображение, которое будет показано на главной странице'
     },
     {
       name: 'excerpt',
