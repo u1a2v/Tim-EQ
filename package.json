@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@sanity/cli": "^1.149.13",
-    "@sanity/image-url": "^0.140.19"
+    "@sanity/image-url": "^0.140.18"
   },
   "description": "",
   "main": "index.js",
