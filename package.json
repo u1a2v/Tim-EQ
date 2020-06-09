@@ -17,19 +17,6 @@
     "lerna": "^3.20.2"
   },
   "dependencies": {
-    "@sanity/cli": "^1.149.13",
     "@sanity/image-url": "^0.140.18"
-  },
-  "description": "",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/u1a2v/Tim-EQ.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/u1a2v/Tim-EQ/issues"
-  },
-  "homepage": "https://github.com/u1a2v/Tim-EQ#readme"
+  }
 }
