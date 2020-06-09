@@ -31,11 +31,9 @@
           {%- endfor -%}
         </ul>
       </nav>
-    <!--
-    <main class="tmpl-home container">
+    
+
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-    -->
-    <main class="container {% if templateClass %} {{ templateClass }}{% endif %}">
       {{ content | safe }}
     </main>
 
