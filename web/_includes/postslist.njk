@@ -5,7 +5,7 @@
     <h4 class="card-title pt-3 pl-3">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</h4>
     <img class="card-img-top" src="{{ currentPost.mainImageURL }}" alt="{{ currentPost.mainImage.alt }}" style="width:100%">
     <p class="card-text pl-3">{{ currentPost.mainImage.alt }}</p>
-    <a href="{{ post.url | url }}" class="btn btn-primary stretched-link">Подробней...</a>
+    <a href="{{ post.url | url }}" class="btn btn-primary">Подробней...</a>
     <!--
     <a href="{{ post.url | url }}" class="postlist-link">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
       
