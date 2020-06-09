@@ -48,9 +48,9 @@ async function getPosts () {
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)
   const preparePosts = reducedDocs.map(generatePost)
-  console.log('=============================================================================================')
-  console.log(preparePosts)
-  console.log('=============================================================================================')
+  //console.log('=============================================================================================')
+  //console.log(preparePosts)
+  //console.log('=============================================================================================')
   return preparePosts
 }
 
